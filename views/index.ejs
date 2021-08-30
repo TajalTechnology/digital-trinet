@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JOB portal API List</title>
+
+    <style>
+      #customers {
+        font-family: Arial, Helvetica, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      #customers td,
+      #customers th {
+        border: 1px solid #ddd;
+        padding: 8px;
+      }
+
+      #customers tr:nth-child(even) {
+        background-color: #f2f2f2;
+      }
+
+      #customers tr:hover {
+        background-color: rgb(231, 122, 122);
+      }
+
+      #customers th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: left;
+        background-color: #04aa6d;
+        color: white;
+      }
+
+      #method {
+        background-color: rgb(196, 43, 43);
+      }
+
+      #no {
+        width: 10px;
+      }
+
+      #name {
+        width: 55px;
+      }
+
+      #url {
+        width: 70px;
+      }
+
+      #method2 {
+        width: 45px;
+      }
+
+      #payload {
+        width: 225px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1 style="background-color: rgba(64, 66, 190, 0.178); text-align: center">
+      Backend API list || Developed by Md.Tajal Islam
+    </h1>
+    <h3 style="text-align: center">Company Name: DIGITAL TRINET</h3>
+    <hr />
+    <p style="text-align: center">
+      <i>Root-Url:</i><b>http://localhost:3001/api</b>
+    </p>
+
+    <hr style="height: 6px; background-color: rgb(165, 177, 177)" />
+
+    <table id="customers">
+      <!-- column name  -->
+      <tr>
+        <th id="no">No</th>
+        <th id="name">Name</th>
+        <th id="url">URL</th>
+        <th id="method2">Method</th>
+        <th id="payload">Payload</th>
+        <th>Details</th>
+      </tr>
+
+      <!-- 1.  -->
+      <tr>
+        <td>1.</td>
+        <td>SIGN-UP</td>
+        <td>/sign-up</td>
+        <td><span id="method">POST</span></td>
+        <td>
+          <pre>
+{
+  "userName": "Md Tajal Islam",
+  "email": "mdtajalislam1188@gmail.com",
+  "password": "123456"
+}
+        </pre
+          >
+        </td>
+        <td><li>Validation</li></td>
+      </tr>
+
+      <!-- 2.Sign-In API  -->
+      <tr>
+        <td>2.</td>
+        <td>SignIn[admin]</td>
+        <td>/admin/sign-in</td>
+        <td><span id="method">POST</span></td>
+        <td>
+          <pre>
+{
+"email": "mdtajalislam1188@gmail.com",
+"password": "tajalislam"
+}         </pre
+          >
+        </td>
+        <td><li>Create a jwt token</li></td>
+      </tr>
+
+      <!-- 3.Sign-in API  -->
+      <tr>
+        <td>3.</td>
+        <td>SignIn</td>
+        <td>/sign-in</td>
+        <td><span id="method">POST</span></td>
+        <td>
+          <pre>
+{
+"email": "mdtajalislam1188@gmail.com",
+"password": "tajalislam"
+}         </pre
+          >
+        </td>
+        <td>
+          <li>Create a jwt token</li>
+        </td>
+      </tr>
+
+      <!-- 4.Password change API  -->
+      <tr>
+        <td>4.</td>
+        <td>userList</td>
+        <td>/users</td>
+        <td><span id="method">GET</span></td>
+        <td>
+          <pre>***adminVerify       </pre>
+        </td>
+        <td>
+          <li>N/A</li>
+        </td>
+      </tr>
+
+      <!-- 5.Profile Picture Update API  -->
+      <tr>
+        <td>5.</td>
+        <td>Profile Picture</td>
+        <td>/profile-image</td>
+        <td><span id="method">PUT</span></td>
+        <td>
+          ***authVerify <br />
+          ***form-data =>file =>profile=>select picture
+        </td>
+        <td>
+          <li>N/A</li>
+        </td>
+      </tr>
+
+      <!-- 6.User Status API  -->
+      <tr>
+        <td>6.</td>
+        <td>ApplyWithCV</td>
+        <td>/apply</td>
+        <td><span id="method">POST</span></td>
+        <td>
+          ***authVerify <br />
+          ***form-data =>file =>cv=>select picture ***jobId
+        </td>
+        <td></td>
+      </tr>
+
+      <!-- 7. API  -->
+      <tr>
+        <td>7.</td>
+        <td>add</td>
+        <td>/company</td>
+        <td><span id="method">POST</span></td>
+        <td>
+          ***adminVerify <br />
+          ***form-data =>file =>cv=>select picture
+          <pre>
+{ 
+"name":"GREEHO", 
+"address":"address", 
+"phone":"phone", 
+"totalEmployee":"total" 
+}
+          </pre>
+        </td>
+        <td>
+          <li>Validation</li>
+        </td>
+      </tr>
+
+      <!-- 8. API  -->
+      <tr>
+        <td>7.</td>
+        <td>edit</td>
+        <td>/company/:id</td>
+        <td><span id="method">PUT</span></td>
+        <td>
+          ***adminVerify <br />
+          ***form-data =>file =>cv=>select picture
+          <pre>
+      { 
+      "name":"GREEHO", 
+      "address":"address", 
+      "phone":"phone", 
+      "totalEmployee":"total" 
+      }
+                </pre
+          >
+        </td>
+        <td>
+          <li>Validation</li>
+        </td>
+      </tr>
+
+      <!-- 9. API  -->
+      <tr>
+        <td>7.</td>
+        <td>delete</td>
+        <td>/company</td>
+        <td><span id="method">DELETE</span></td>
+        <td>
+          ***adminVerify <br />
+
+          <pre>
+ 
+N/A
+          </pre>
+        </td>
+        <td>
+          <li>N/A</li>
+        </td>
+      </tr>
+
+      <!-- 1o. API  -->
+      <tr>
+        <td>1o.</td>
+        <td>view</td>
+        <td>/company/:id</td>
+        <td><span id="method">GET</span></td>
+        <td>
+N/A
+        </td>
+        <td>
+          <li>N/A</li>
+        </td>
+      </tr>
+
+      <!-- 11.Blocked User List API  -->
+      <tr>
+        <td>11.</td>
+        <td>add</td>
+        <td>/job</td>
+        <td><span id="method">POST</span></td>
+        <td>
+          ***adminVerify <br />
+<pre>
+  {
+    "companyId": 2,
+    "position": "sqa",
+    "vacancy": 6,
+    "jobContext": [
+        "aws",
+        "react"
+    ],
+    "responsibility": [
+        "aws",
+        "react"
+    ],
+    "employmentStatus": "full"
+}
+</pre>
+        </td>
+        <td>
+          <li>N/A</li>
+        </td>
+      </tr>
+
+      <!-- 7.Unverified User List API  -->
+      <tr>
+        <td>12.</td>
+        <td>edit</td>
+        <td>/job/:id</td>
+        <td><span id="method">PUT</span></td>
+        <td>
+          ***adminVerify <br />
+<pre>
+  {
+    "companyId": 2,
+    "position": "sqa",
+    "vacancy": 6,
+    "jobContext": [
+        "aws",
+        "react"
+    ],
+    "responsibility": [
+        "aws",
+        "react"
+    ],
+    "employmentStatus": "full"
+}
+</pre>
+        </td>
+        <td>
+          <li>N/A</li>
+        </td>
+      </tr>
+
+      <!-- 11.User Details API  -->
+      <tr>
+        <td>13.</td>
+        <td>delete</td>
+        <td>/job/:id</td>
+        <td><span id="method">DELETE</span></td>
+        <td>***adminVerify <br /></td>
+        <td>
+          <li>N/A</li>
+        </td>
+      </tr>
+
+
+
+      <tr>
+        <td>14.</td>
+        <td>VIEW</td>
+        <td>/job/:id</td>
+        <td><span id="method">GET</span></td>
+        <td>N/A <br /></td>
+        <td>
+          <li>N/A</li>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
